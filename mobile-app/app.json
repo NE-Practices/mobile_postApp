@@ -1,15 +1,15 @@
 {
   "expo": {
-    "name": "ne-mobile",
-    "slug": "ne-mobile",
+    "name": "Mobile Template",
+    "slug": "Mobile Template",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./src/assets/images/imgs/logo.png",
     "scheme": "myapp",
     "userInterfaceStyle": "eva",
     "splash": {
-      "image": "",
-      "resizeMode": "contain",
+      "image": "./src/assets/images/imgs/logo.png",
+      "resizeMode": "cover",
       "backgroundColor": "#ffffff"
     },
     "ios": {
@@ -24,7 +24,7 @@
     "web": {
       "bundler": "metro",
       "output": "static",
-      "favicon": "./src/assets/images/favicon.png"
+      "favicon": "./src/assets/images/imgs/logo.png"
     },
     "plugins": ["expo-router"],
     "experiments": {

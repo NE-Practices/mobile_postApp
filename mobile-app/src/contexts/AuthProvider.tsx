@@ -63,11 +63,11 @@ export function AuthProvider(props: AuthProviderProps) {
   const replace = (path: string) => {
     if (Platform.OS === "ios") {
       setTimeout(() => {
-        router.replace(path);
+        router.replace(path as any);
       }, 1);
     } else {
       setImmediate(() => {
-        router.replace(path);
+        router.replace(path as any);
       });
     }
   };
@@ -119,8 +119,8 @@ export function AuthProvider(props: AuthProviderProps) {
   useEffect(() => {
     console.log("segments", segments);
     if (!ready) return;
-    const inAuthGroup = segments[0] === "(auth)" || segments.length === 0;
-    const isLanding = segments[0] === "landing";
+    const inAuthGroup = segments[0] === "(auth)" || segments.length as number === 0;
+    const isLanding = segments[0] as string === "landing";
 
     // segments length is 0 when on the landing page. ot '/'
     // if (segments.length === 0) return;
